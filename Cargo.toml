@@ -1,8 +1,9 @@
 [package]
 name = "soroban_decimal_numbers"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Decimal numbers handler for no_std applications designed to be used in Soroban"
 license = "MIT"
+repository="https://github.com/karol-bisztyga/soroban_decimal_numbers"
 
 [dependencies]
