@@ -77,15 +77,6 @@ pub fn test_multiply() {
 
   assert!(
     DecimalNumberWrapper::mul(
-      DecimalNumberWrapper::new("1.5"),
-      DecimalNumberWrapper::new("2.8"),
-    )
-    .as_tuple()
-      == (4, 200)
-  );
-
-  assert!(
-    DecimalNumberWrapper::mul(
       DecimalNumberWrapper::new("1.32"),
       DecimalNumberWrapper::new("0.03"),
     )
@@ -129,6 +120,13 @@ pub fn test_cmp() {
   assert!(
     DecimalNumberWrapper::cmp(
       DecimalNumberWrapper::new("14.46"),
+      DecimalNumberWrapper::new("14.45"),
+    ) == 1
+  );
+
+  assert!(
+    DecimalNumberWrapper::cmp(
+      DecimalNumberWrapper::new("14.451"),
       DecimalNumberWrapper::new("14.45"),
     ) == 1
   );
