@@ -1,6 +1,6 @@
 [package]
 name = "soroban_decimal_numbers"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 description = "Decimal numbers handler for no_std applications designed to be used in Soroban"
 license = "MIT"
