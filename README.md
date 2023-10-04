@@ -39,6 +39,6 @@ This tool is in the early stage of development. It may be developed more in the 
 It uses decimal numbers with a maximum of 3 decimal places. This value is hardcoded for now but it may be parameterized in the future.
 Please note that you will lose precision if your calculations go beyond this constraint. For example, if you try to calculate `12.34/34.56` which results in `0.35706018518`, you are going to get `0.357` - it just cuts the result, so the operation is `floor`, not `round` or anything else like that.
 
-Negative numbers are not supported at the moment. If you perform a subtraction that would result in a negative number (like `5-3`), the result will be `0`.
+Negative numbers are not supported at the moment. If you perform a subtraction that would result in a negative number (like `3-5`), the result will be `0`.
 
 Please be careful when using the tuple representation. You will need to provide all decimal point numbers. If you want to represent for example `1.2`, you need to do it like this: `DecimalNumberWrapper::from((1, 200))`, if you do `DecimalNumberWrapper::from((1, 2))`, you are going to get `1.002`. A strongly recommended approach to initialize the numbers is to use string slices: `DecimalNumberWrapper::from("1.2");`.
