@@ -3,7 +3,7 @@
 static DECIMAL_POINTS: u32 = 3;
 static DECIMAL_MODIFIER: u32 = (10 as u32).pow(DECIMAL_POINTS);
 
-#[derive(Default)]
+#[derive(Default, Debug, Clone, Copy)]
 pub struct DecimalNumberWrapper {
     pub whole: u32,
     pub fractional: u32,

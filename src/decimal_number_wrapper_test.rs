@@ -26,6 +26,15 @@ pub fn test_from_to() {
 }
 
 #[test]
+pub fn test_clone() {
+  let a = DecimalNumberWrapper::new("12.34");
+  let b = DecimalNumberWrapper::new("34.56");
+
+  assert!(DecimalNumberWrapper::add(a.clone(), b.clone()).as_tuple() == (46, 900));
+  assert!(DecimalNumberWrapper::sub(b.clone(), a.clone()).as_tuple() == (22, 220));
+}
+
+#[test]
 pub fn test_add() {
     assert!(
         DecimalNumberWrapper::add(
